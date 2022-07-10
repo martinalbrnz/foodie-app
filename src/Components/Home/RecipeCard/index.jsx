@@ -5,7 +5,7 @@ const RecipeCard = (props) => {
     <div className={styles.cardContainer}>
       <div className={styles.cardHeader}>
         <h2>Mozzarella pizza</h2>
-        <i class="material-icons">favorite{props.favorite ? '' : '_border'}</i>
+        <i className="material-icons">favorite{props.favorite ? '' : '_border'}</i>
       </div>
       <div className={styles.estimatedTime}>
         <i className="material-icons">
