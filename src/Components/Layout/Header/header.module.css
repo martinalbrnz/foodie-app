@@ -1,0 +1,12 @@
+.headerContainer {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding: 12px 24px;
+  background-color: #FF9100;
+  box-shadow: 0px 1px 3px 0px #00000040;
+}
+
+.appName {
+  font-size: 24px;
+}
