@@ -1,0 +1,14 @@
+.estimatedTime {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	height: 12px;
+	padding-left: 24px;
+	margin-bottom: 12px;
+	font-size: 12px;
+	color: #00000099;
+}
+
+.estimatedTime > i {
+	font-size: 12px;
+}

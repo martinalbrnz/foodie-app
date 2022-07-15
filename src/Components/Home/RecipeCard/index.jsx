@@ -1,4 +1,5 @@
 import styles from './recipeCard.module.css';
+import EstimatedTime from 'Components/Shared/EstimatedTime';
 
 const RecipeCard = (props) => {
   const { name, ingredients, utensils, vegetarian, estimatedTime } = props.recipe;
@@ -8,12 +9,7 @@ const RecipeCard = (props) => {
         <h2>{name}</h2>
         <i className="material-icons">favorite{props.favorite ? '' : '_border'}</i>
       </div>
-      <div className={styles.estimatedTime}>
-        <i className="material-icons">
-          schedule
-        </i>
-        <p>{estimatedTime}m</p>
-      </div>
+      <EstimatedTime estimatedTime={estimatedTime} />
       <div className={styles.recipeImage}></div>
       <div className={styles.cardFooter}>
         <div className={styles.infoContainer}>

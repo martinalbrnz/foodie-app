@@ -1,0 +1,25 @@
+.recipePage {
+	display: flex;
+	flex-direction: column;
+	padding: 24px;
+}
+
+material-icons {
+	cursor: pointer;
+	user-select: none;
+}
+
+.imgContainer {
+	width: 480px;
+	height: 270px;
+	background-color: #00000040;
+	border-radius: 4px;
+}
+
+.searchBar {
+	padding: 12px 12px 14px 20px;
+	border-radius: 4px;
+	width: 100%;
+	border: 1px solid #00000040;
+	font-size: 16px;
+}
