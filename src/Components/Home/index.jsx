@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import styles from './home.module.css';
 import RecipeCard from './RecipeCard';
 import * as recipeThunks from 'redux/recipes/thunks';
+import Loader from 'Components/Shared/Loader';
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -15,12 +16,13 @@ const Home = () => {
   // SIDEBAR
 
   if (isFetchingRecipes) {
-    return <div>Fetching...</div>;
+    return <Loader />;
   }
   return <div className={styles.home}>
     <label htmlFor="search">
       <input type="text" className={styles.searchBar} placeholder="Search a recipe"/>
     </label>
+    <h1>HOME</h1>
     {recipes.map((recipe) => {
       return <RecipeCard favorite={true} recipe={recipe} />
     })}

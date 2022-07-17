@@ -28,26 +28,27 @@ const Recipe = () => {
 		<label htmlFor="search">
       <input type="text" className={styles.searchBar} placeholder="Search a recipe"/>
     </label>
+		<h2>RECIPE</h2>
 		<div className={styles.imgContainer}></div>
-		<h2>{recipe.name}</h2>
-		<EstimatedTime estimatedTime={recipe.estimatedTime} />
-		<ul>
+		<h2>{recipe?.name}</h2>
+		<EstimatedTime estimatedTime={recipe?.estimatedTime} />
+		{/* <ul>
 			{recipe.ingredients.map((ingredient) => {
 				return <li>{ingredient.amount * servings}{ingredient.unit} {ingredient.ingredient.name}</li>
 			})}
-		</ul>
-		<ul>
+		</ul> */}
+		{/* <ul>
 			{recipe.utensils.map((utensil) => {
 				return <div>
 					<p></p>
 				</div>
 			})}
-		</ul>
-		<ol>
+		</ul> */}
+		{/* <ol>
 			{recipe.instructions.map((inst) => {
 				return <li>{inst}</li>
 			})}
-		</ol>
+		</ol> */}
 		<div>
 			<i className="material-icons" onClick={minusServing}>remove</i>
 			<p>Servings: {servings}</p>
