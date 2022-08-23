@@ -1,9 +1,9 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import styles from './recipe.module.css';
 import { useSelector, useDispatch } from 'react-redux';
-import * as recipeThunk from 'redux/recipes/thunks';
+import * as recipeThunk from '../../redux/recipes/thunks';
 import { useEffect, useState } from 'react';
-import EstimatedTime from 'Components/Shared/EstimatedTime';
+import EstimatedTime from '../Shared/EstimatedTime';
 
 const Recipe = () => {
 	const [servings,  setServings] = useState(1);

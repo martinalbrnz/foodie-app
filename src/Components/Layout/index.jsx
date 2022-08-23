@@ -4,9 +4,9 @@ import { Suspense, lazy } from 'react';
 
 import Header from "./Header";
 import Footer from "./Footer";
-const Login = lazy(() => import ('Components/Login'));
-const Home = lazy(() => import ('Components/Home'));
-const Recipe = lazy(() => import ('Components/Recipe'));
+const Login = lazy(() => import ('../../Components/Login'));
+const Home = lazy(() => import ('../../Components/Home'));
+const Recipe = lazy(() => import ('../../Components/Recipe'));
 
 const Layout = ({ children }) => {
 	return <>

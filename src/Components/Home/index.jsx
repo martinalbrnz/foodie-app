@@ -2,8 +2,8 @@ import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import styles from './home.module.css';
 import RecipeCard from './RecipeCard';
-import * as recipeThunks from 'redux/recipes/thunks';
-import Loader from 'Components/Shared/Loader';
+import * as recipeThunks from '../../redux/recipes/thunks';
+import Loader from  '../../Components/Shared/Loader';
 
 const Home = () => {
   const dispatch = useDispatch();

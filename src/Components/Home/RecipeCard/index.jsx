@@ -1,5 +1,5 @@
 import styles from './recipeCard.module.css';
-import EstimatedTime from 'Components/Shared/EstimatedTime';
+import EstimatedTime from '../../Shared/EstimatedTime';
 
 const RecipeCard = (props) => {
   const { name, ingredients, utensils, vegetarian, estimatedTime } = props.recipe;
