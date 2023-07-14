@@ -1,4 +1,6 @@
+import { useAtomValue } from "jotai";
 import { Navigate } from "react-router-dom";
+import { userAtom } from "../store/user";
 
 export interface ProtectedRouteProps {
   roles: string[];
@@ -6,9 +8,9 @@ export interface ProtectedRouteProps {
 }
 
 const ProtectedRoute = ({ roles, children }: ProtectedRouteProps) => {
-  const role = localStorage.getItem("role") ?? "guest";
-  if (roles.includes(role)) return children;
-  else return <Navigate to="/login" />;
+  const user = useAtomValue(userAtom);
+  if (!user || !roles.includes(user.role)) return <Navigate to="/login" />;
+  else return children;
 };
 
 export default ProtectedRoute;
