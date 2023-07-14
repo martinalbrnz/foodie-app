@@ -1,6 +1,7 @@
 import { useSetAtom } from "jotai";
 import { ChangeEvent, useState } from "react";
 import { RiEyeLine, RiEyeOffLine } from "react-icons/ri";
+import Button from "src/app/components/shared/Button";
 import Input from "src/app/components/shared/Input";
 import { userAtom } from "src/app/store/user";
 
@@ -44,8 +45,8 @@ const LoginView = () => {
 
   return (
     <div className="grid items-center justify-center h-full">
-      <div className="grid gap-4 p-4 bg-gray-600">
-        <h1>¡Bienvenido!</h1>
+      <div className="grid gap-4 p-4 bg-primary-600 rounded">
+        <h1 className="select-none">¡Bienvenido!</h1>
         <form className="flex flex-col gap-2">
           <Input
             type="text"
@@ -64,7 +65,7 @@ const LoginView = () => {
             onChange={handleUserLoginChange}
           />
         </form>
-        <button onClick={login}>Ingresar</button>
+        <Button onClick={login} label="Ingresar" className="bg-red-500" />
       </div>
     </div>
   );
